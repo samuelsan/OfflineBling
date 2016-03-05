@@ -1,0 +1,6 @@
+@graph = Koala::Facebook::GraphAPI.new # pre 1.2beta
+@graph = Koala::Facebook::API.new # 1.2beta and beyond
+
+<%= image_tag @user['picture']['data']['url'].to_s %>
+<%= @user['name'] %>
+<%= @graph.get_object("koppel") %>
